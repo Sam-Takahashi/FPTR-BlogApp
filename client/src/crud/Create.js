@@ -10,7 +10,7 @@ const Create = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
     const [isPending, setIsPending] = useState(false);
-    const { data: blogs } = useFetch('http://localhost:3000/blogs');
+    const { data: blogs } = useFetch('https://react-blog-app-zeta.vercel.app/blogs');
 
     // useNavigate(browsers forwad/back btns, redirect the user)
     const history = useNavigate();
@@ -27,7 +27,7 @@ const Create = () => {
         setIsPending(true);
 
         //* send form data to endpoint(db) [async method]
-        fetch('http://localhost:3000/create-blog', {
+        fetch('https://react-blog-app-zeta.vercel.app/create-blog', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

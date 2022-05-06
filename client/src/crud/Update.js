@@ -11,12 +11,12 @@ const Update = () => {
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
     const { theId } = useParams();
-    const { data: blogs } = useFetch('http://localhost:3000/blogs');
+    const { data: blogs } = useFetch('https://react-blog-app-zeta.vercel.app/blogs');
 
 
     // fetch single (blog) endpoint
     useEffect(() => {
-        fetch('http://localhost:3000/blog/' + theId)
+        fetch('https://react-blog-app-zeta.vercel.app/blog/' + theId)
             .then(res => {
                 return res.json()
             }).then((data) => { // data = db.json
@@ -39,7 +39,7 @@ const Update = () => {
 
         //* SUBMIT UPDATE BTN
         // fetch update endpoint
-        fetch('http://localhost:3000/update-blog/' + theId, {
+        fetch('https://react-blog-app-zeta.vercel.app/update-blog/' + theId, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog) // convert blog object to json
