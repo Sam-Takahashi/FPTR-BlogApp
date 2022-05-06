@@ -8,7 +8,8 @@
     "start": "ts-node index.ts",
     "dev": "nodemon server",
     "build": "tsc -p tsconfig.json",
-    "starter": "node index.js"
+    "starter": "node index.js",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "@prisma/client": "^3.13.0",
     "cors": "^2.8.5",
     "fastify": "^3.29.0",
+    "mongoose": "^6.3.2",
     "prisma": "^3.13.0"
   },
   "devDependencies": {

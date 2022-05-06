@@ -71,7 +71,15 @@ const Update = () => {
                 ></textarea>
                 <label>Blog author:</label>
 
-                {blogs && <BlogDropdown blogData={blogs} />}
+                {/* {blogs && <BlogDropdown blogData={blogs} />} */}
+                <select
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                >
+                    <option value="Sam">Sam</option>
+                    <option value="Terauchi">Terauchi</option>
+                    <option value="Hassan">Hassan</option>
+                </select>
 
                 {!isPending && <button>Update Blog</button>}
                 {isPending && <button disabled>Updating blog...</button>}

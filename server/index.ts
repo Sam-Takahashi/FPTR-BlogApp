@@ -1,7 +1,5 @@
 import fastify from 'fastify';
 import { PrismaClient } from '@prisma/client';
-// import cors from 'cors';
-// const cors = require('cors');
 
 
 
@@ -37,7 +35,7 @@ app.get <
   async (request, reply) => {
     const {id} = request.params;
     const blog = await prisma.blog.findUnique({
-      where: {id: Number(id)},
+      where: {id: String(id)},
     });
     reply.send(blog);
   });
@@ -66,7 +64,7 @@ app.put<{ Body: IBlogBodyParam; Params: IByIdParam }>(
     const { id } = request.params;
     const { title, body, author } = request.body;
     const updatedBlog = await prisma.blog.update({
-      where: { id: Number(id) },
+      where: { id: String(id) },
       data: {
         title,
         body,
@@ -84,7 +82,7 @@ app.delete <
   async (request, reply) => {
     const {id} = request.params;
     await prisma.blog.delete({
-      where: {id: Number(id)},
+      where: {id: String(id)},
     });
     reply.send('blog removed');
   });
