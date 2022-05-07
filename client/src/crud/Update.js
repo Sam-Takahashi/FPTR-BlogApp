@@ -38,7 +38,7 @@ const Update = () => {
         setIsPending(true);
 
         //* SUBMIT UPDATE BTN
-        // fetch update endpoint
+        // fetch update endpoint // https://react-blog-app-zeta.vercel.app/update-blog/
         fetch('http://localhost:3000/update-blog/' + theId, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
