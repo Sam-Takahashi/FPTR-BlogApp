@@ -16,7 +16,7 @@ const Update = () => {
 
     // fetch single (blog) endpoint
     useEffect(() => {
-        fetch('http://localhost:3000/blog/' + theId)
+        fetch('http://localhost:3030/blog/' + theId)
             .then(res => {
                 return res.json()
             }).then((data) => { // data = db.json
@@ -39,7 +39,7 @@ const Update = () => {
 
         //* SUBMIT UPDATE BTN
         // fetch update endpoint 
-        fetch('http://localhost:3000/update-blog/' + theId, {
+        fetch('http://localhost:3030/update-blog/' + theId, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog) // convert blog object to json

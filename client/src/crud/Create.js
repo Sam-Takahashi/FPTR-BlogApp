@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import BlogDropdown from '../components/Dropdown';
-import useFetch from '../myHooks/useFetch';
+// import BlogDropdown from '../components/Dropdown';
+// import useFetch from '../myHooks/useFetch';
 
 
 const Create = () => {
@@ -10,7 +10,7 @@ const Create = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
     const [isPending, setIsPending] = useState(false);
-    const { data: blogs } = useFetch('http://localhost:3000/blogs');
+    // const { data: blogs } = useFetch('http://localhost:3030/blogs');
 
     // useNavigate(browsers forwad/back btns, redirect the user)
     const history = useNavigate();
@@ -27,7 +27,7 @@ const Create = () => {
         setIsPending(true);
 
         //* send form data to endpoint(db) [async method]
-        fetch('http://localhost:3000/create-blog', {
+        fetch('http://localhost:3030/create-blog', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
