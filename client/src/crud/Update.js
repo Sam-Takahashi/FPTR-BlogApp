@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import BlogDropdown from '../components/Dropdown';
-import useFetch from '../myHooks/useFetch';
+// import BlogDropdown from '../components/Dropdown';
+// import useFetch from '../myHooks/useFetch';
 
 
 const Update = () => {
@@ -11,7 +11,7 @@ const Update = () => {
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
     const { theId } = useParams();
-    const { data: blogs } = useFetch('http://localhost:3000/blogs');
+    // const { data: blogs } = useFetch('http://localhost:3000/blogs');
 
 
     // fetch single (blog) endpoint
@@ -38,7 +38,7 @@ const Update = () => {
         setIsPending(true);
 
         //* SUBMIT UPDATE BTN
-        // fetch update endpoint // https://react-blog-app-zeta.vercel.app/update-blog/
+        // fetch update endpoint 
         fetch('http://localhost:3000/update-blog/' + theId, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },

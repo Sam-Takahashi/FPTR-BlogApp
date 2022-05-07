@@ -1,0 +1,22 @@
+{
+  "name": "fpr-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sam-Takahashi/FPTR-BlogApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sam-Takahashi/FPTR-BlogApp/issues"
+  },
+  "homepage": "https://github.com/Sam-Takahashi/FPTR-BlogApp#readme",
+  "dependencies": {
+    "@vercel/node": "^1.15.0"
+  }
+}

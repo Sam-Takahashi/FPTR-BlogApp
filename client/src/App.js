@@ -7,7 +7,7 @@ import NotFound from './components/NotFound';
 import Update from './crud/Update';
 
 function App() {
-  const title = 'Welcome to the Metis Blog'
+  // const title = 'Welcome to the Metis Blog';
   return (
     <Router>
       <div className="App">
