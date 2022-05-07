@@ -3,11 +3,11 @@ import useFetch from "../myHooks/useFetch";
 
 const BlogDetails = () => {
     const { theId } = useParams();
-    const { data: blogData, error, isLoading } = useFetch('https://react-blog-jknvbeia7-sam-takahashi.vercel.app/blog/' + theId);
+    const { data: blogData, error, isLoading } = useFetch('https://react-blog-app-zeta.vercel.app:3030/blog/' + theId);
     const history = useNavigate();
 
     const handleClick = () => {
-        fetch('https://react-blog-jknvbeia7-sam-takahashi.vercel.app/delete-blog/' + blogData.id, {
+        fetch('https://react-blog-app-zeta.vercel.app:3030/delete-blog/' + blogData.id, {
             method: 'DELETE'
         }).then(() => {
             history('/');
