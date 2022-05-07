@@ -3,7 +3,7 @@ import useFetch from "./myHooks/useFetch";
 
 const Home = () => {
 
-    const { data: blogs, isLoading, error } = useFetch('https://react-blog-dtimlb9j1-sam-takahashi.vercel.app/blogs');
+    const { data: blogs, isLoading, error } = useFetch('https://react-blog-jknvbeia7-sam-takahashi.vercel.app/blogs');
 
     return (
         <div className="home">
